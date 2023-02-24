@@ -10,25 +10,7 @@ int solution(string t, string p) {
     for(int i = 0;i < t.size() - psz + 1;i++)
     {
         string num = t.substr(i, psz);
-      
-        bool same = true;
-        
-        for(int j = 0 ;j < psz;j++ )
-        {
-            if(num[j] < p[j])
-            {
-                answer++;
-                same = false;
-                break;
-            }
-            else if(num[j] > p[j])
-            {
-                same = false;
-                break;
-            }
-        }
-        
-        if(same) answer++;   
+        if(num <= p) answer++;
     }
     return answer;
 }
