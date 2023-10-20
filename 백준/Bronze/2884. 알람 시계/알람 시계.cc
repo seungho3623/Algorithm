@@ -5,11 +5,11 @@ int main(void){
     cin >> a >> b;
     if(b < 45){
         b += 15;
-        a--;
+        if(--a < 0)
+        	a = 23;
     }
     else
         b -= 45;
-    if(a < 0)
-        a = 23;
+
     cout << a << " "<< b;
 }
